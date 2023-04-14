@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Code Highlighter",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "customScript.js",
+        "lib/highlightjs/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+  
+}
